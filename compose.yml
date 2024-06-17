@@ -1,0 +1,25 @@
+services:
+  nginx:
+    build: ./nginx/
+    ports:
+      - 8080:80
+
+    volumes:
+      - ./php/:/var/www/html/
+
+  php:
+    build: ./php/
+    expose:
+      - 9000
+
+    volumes:
+      - ./php/:/var/www/html/
+
+  db:
+    image: mariadb
+    volumes:
+      - ./pbl-data:/var/lib/mysql
+
+    environment:
+      MYSQL_ROOT_PASSWORD: mariadb
+      MYSQL_DATABASE: pbl_db
