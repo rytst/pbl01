@@ -5,6 +5,8 @@ $DATABASE_HOST = 'db';
 $DATABASE_USER = 'pbl01_user';
 $DATABASE_PASS = 'pbl01_user_pass';
 $DATABASE_NAME = 'pbl01_db';
+
+
 // Try and connect using the info above.
 $con = mysqli_connect($DATABASE_HOST, $DATABASE_USER, $DATABASE_PASS, $DATABASE_NAME);
 if ( mysqli_connect_errno() ) {
@@ -15,7 +17,7 @@ if ( mysqli_connect_errno() ) {
 // Now we check if the data from the login form was submitted, isset() will check if the data exists.
 if ( !isset($_POST['username'], $_POST['password']) ) {
   // Could not get the data that should have been sent.
-  exit('Please fill both the username and password fields!');
+  exit('ユーザ名の欄とパスワードの欄を埋めてから送信してください');
 }
 
 // Prepare our SQL, preparing the SQL statement will prevent SQL injection.
@@ -45,11 +47,11 @@ if ($stmt = $con->prepare('SELECT id, password FROM accounts WHERE username = ?'
 
 	} else {
 		// Incorrect password
-		echo 'Incorrect username and/or password!';
+		echo 'ユーザ名またはパスワードが違います';
 	}
 } else {
 	// Incorrect username
-	echo 'Incorrect username and/or password!';
+	echo 'ユーザ名またはパスワードが違います';
 }
 
 	$stmt->close();

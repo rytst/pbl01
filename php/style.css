@@ -41,7 +41,7 @@ bodv {
   	align-items: center;
   	width: 50px;
   	height: 50px;
-  	background-color: #3274d6;
+  	background-color: #000;
   	color: #ffffff;
 }
 
@@ -59,7 +59,7 @@ bodv {
   	width: 100%;
   	padding: 15px;
  	margin-top: 20px;
-  	background-color: #3274d6;
+  	background-color: #1a5ec2;
   	border: 0;
   	cursor: pointer;
   	font-weight: bold;
@@ -69,7 +69,7 @@ bodv {
 
 
 .login form input[type="submit"]:hover {
-	background-color: #2868c7;
+	background-color: #3c7fe2;
   	transition: background-color 0.2s;
 }
 
@@ -78,7 +78,7 @@ bodv {
 
 
 .navtop {
-	background-color: #2f3947;
+	background-color: #3c7fe2;
 	height: 60px;
 	width: 100%;
 	border: 0;
@@ -112,7 +112,7 @@ bodv {
 .navtop div a {
 	padding: 0 20px;
 	text-decoration: none;
-	color: #c1c4c8;
+	color: #eaebed;
 	font-weight: bold;
 }
 
@@ -123,7 +123,7 @@ bodv {
 
 
 .navtop div a:hover {
-	color: #eaebed;
+	color: #c1c4c8;
 }
 
 

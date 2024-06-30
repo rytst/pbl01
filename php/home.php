@@ -19,14 +19,13 @@ if (!isset($_SESSION['loggedin'])) {
   <body class="loggedin">
     <nav class="navtop">
       <div>
-        <h1>Website Title</h1>
-        <a href="profile.php"><i class="fas fa-user-circle"></i>Profile</a>
-        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>Logout</a>
+        <h1>PBL01</h1>
+        <a href="logout.php"><i class="fas fa-sign-out-alt"></i>ログアウト</a>
       </div>
     </nav>
     <div class="content">
       <h2>Home Page</h2>
-      <p>Welcome back, <?=htmlspecialchars($_SESSION['name'], ENT_QUOTES)?>!</p>
+      <p><?=htmlspecialchars($_SESSION['name'], ENT_QUOTES)?> としてログインしています</p>
     </div>
   </body>
 </html>
